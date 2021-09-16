@@ -1,7 +1,6 @@
-build:
-	protoc -I. --go_out=plugins=micro:$(GOPATH)/src/github.com/superryanguo/kick \
-	  user_service/proto/user.proto
-	docker build -t outlet_client -f ./outlet_client/Dockerfile ./outlet_client
+so:
+	gcc -c -fPIC -o mystack.o mystack.c
+	gcc -shared -o libmystack.so mystack.o
 
 run:
 	docker run outlet_client
