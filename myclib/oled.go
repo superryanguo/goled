@@ -1,9 +1,7 @@
 package main
 
-//#cgo CFLAGS: -I ./myclib/
-//#cgo LDFLAGS: -L ./myclib -lmyclib
 // #include <stdlib.h>
-// #include "./myclib/mytest.h"
+// #include "mytest.h"
 import "C"
 import (
 	"fmt"
