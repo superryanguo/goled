@@ -1,7 +1,7 @@
-so:
-	gcc -c -fPIC -o mystack.o mystack.c
-	gcc -shared -o libmystack.so mystack.o
+lib :
+	gcc -c ./oledc/oled.c -lwiringPi
+	ar cru ./oledc/liboledc.a ./oledc/oled.o
 
-run:
-	docker run outlet_client
+run: lib
+	go run .
 
