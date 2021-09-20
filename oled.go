@@ -19,6 +19,7 @@ func OledInit() {
 func OledShow(s string) {
 	cs := C.CString(s)
 	defer C.free(unsafe.Pointer(cs))
+	C.ssd1306_clearDisplay()
 	C.ssd1306_drawText(C.int(0), C.int(8), cs)
 	C.ssd1306_display()
 }

@@ -161,9 +161,9 @@ int i2cd;
 void oled_init()
 {
 	ssd1306_begin(SSD1306_SWITCHCAPVCC, SSD1306_I2C_ADDRESS);
-    /*ssd1306_display();      //show logo*/
-    /*ssd1306_clearDisplay();*/
-    /*delay(500);*/
+	ssd1306_display();      //show logo
+	ssd1306_clearDisplay();
+	delay(500);
 	printf("oled init ok!\n");
 }
 
