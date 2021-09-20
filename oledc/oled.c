@@ -158,6 +158,15 @@ int i2cd;
 
 #define ssd1306_swap(a, b) { int t = a; a = b; b = t; }
 
+void oled_init()
+{
+	ssd1306_begin(SSD1306_SWITCHCAPVCC, SSD1306_I2C_ADDRESS);
+    /*ssd1306_display();      //show logo*/
+    /*ssd1306_clearDisplay();*/
+    /*delay(500);*/
+	printf("oled init ok!\n");
+}
+
 // the most basic function, set a single pixel
 void ssd1306_drawPixel(int x, int y, unsigned int color)
 {
