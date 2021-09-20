@@ -3,7 +3,7 @@
 #include <wiringPiI2C.h>
 
 // 导入oled显示屏库
-#include "ssd1306_i2c.h"
+#include "./oledc/oled.h"
 
 // 导入文件控制函数库
 #include <stdio.h>

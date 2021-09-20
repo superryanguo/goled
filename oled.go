@@ -1,7 +1,7 @@
 package main
 
 //#cgo CFLAGS: -I ./oledc/
-//#cgo LDFLAGS: -L ./oledc -loledc
+//#cgo LDFLAGS: -L ./oledc -loledc -lwiringPi
 // #include <stdlib.h>
 // #include "./oledc/oled.h"
 // #include "./oledc/oled_fonts.h"
@@ -15,7 +15,7 @@ import (
 func OledShow(s string) {
 	cs := C.CString(s)
 	defer C.free(unsafe.Pointer(cs))
-	C.ssd1306_drawText(C.int(0), C.int(8), cs)
+	C.ssd1306_drawText(C.int(0), C.int(0), cs)
 	C.ssd1306_display()
 }
 

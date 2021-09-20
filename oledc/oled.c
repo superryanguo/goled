@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "ssd1306_i2c.h"
+#include "oled.h"
 
 #include <wiringPiI2C.h>
 
