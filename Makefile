@@ -5,3 +5,6 @@ lib :
 run: lib
 	go run .
 
+fax: lib
+	go run ./face/face.go 0 data/haarcascade_frontalface_default.xml
+
