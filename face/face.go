@@ -1,10 +1,10 @@
 package main
 
-//#cgo CFLAGS: -I ./oledc/
-//#cgo LDFLAGS: -L ./oledc -loledc -lwiringPi
+//#cgo CFLAGS: -I ../oledc/
+//#cgo LDFLAGS: -L ../oledc -loledc -lwiringPi
 // #include <stdlib.h>
-// #include "./oledc/oled.h"
-// #include "./oledc/oled_fonts.h"
+// #include "../oledc/oled.h"
+// #include "../oledc/oled_fonts.h"
 import "C"
 import (
 	"fmt"
@@ -73,7 +73,7 @@ func main() {
 	}
 
 	fmt.Printf("Start reading device: %v\n", deviceID)
-	c := make(chan string)
+	c := make(chan string, 10)
 	defer close(c)
 	go func() {
 		for {
